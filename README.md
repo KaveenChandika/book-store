@@ -17,8 +17,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Technologies
 
-Used NextJS -https://nextjs.org/
+
 Used Zustand for state manage in whole app https://zustand-demo.pmnd.rs/
 
 Used ZOD for typescript validations https://zod.dev/
+
+Used Mantine for UI https://mantine.dev/
+
+Used Mantine Datatable for data structuering https://icflorescu.github.io/mantine-datatable/
 
