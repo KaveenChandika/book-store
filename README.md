@@ -3,10 +3,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Getting Started
 
 First, run the development server:
+Node Version 18
 
 ```bash
-node verions 18
-If you have nvm please use following commands
 nvm install 18
 nvm use 18
 ```
