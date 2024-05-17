@@ -10,7 +10,8 @@ import { useRouter } from 'next/navigation';
 
 const Orders = () => {
   const router = useRouter();
-  const data = JSON.parse(localStorage.getItem("order"));
+  const orders = localStorage.getItem("order");
+  const data = orders ? JSON.parse(orders) : []
   const handleContinueShopping = () => {
     window.location.href="/Products"
   }
@@ -26,7 +27,7 @@ const Orders = () => {
       ) : (
         <div className={classes.orderEmpty}>
           <h2>No Orders</h2>
-          <Button onClick={(e: any) => handleContinueShopping(e)}>
+          <Button onClick={handleContinueShopping}>
             <Text tt="uppercase" fw={600}>Continue Shopping</Text>
           </Button>
         </div>

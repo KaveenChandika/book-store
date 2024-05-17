@@ -8,13 +8,13 @@ import { useRouter } from 'next/navigation';
 const SuccessPage = () => {
     const router = useRouter();
     const handleContinueShopping = () =>{
-      window.location.reload("/Products")
+      router.push("/Products");
     }   
   return (
     <div className={classes.success}>
         <h1>Thank You</h1>
         <h2>Your order has been placed Successfully!</h2>
-        <Button onClick={(e:any) => handleContinueShopping(e)}>
+        <Button onClick={handleContinueShopping}>
             <Text tt="uppercase" fw={600}>More Shopping</Text>
         </Button>
     </div>

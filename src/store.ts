@@ -6,7 +6,7 @@ type cartQuantityStore = {
     cartData: any,
     increment: (id: number) => void;
     decrement: (id: number) => void;
-    addToCart: (id: any, data:[]) => void;
+    addToCart: (id: any, data:any) => void;
     removeItem: (id:any) => void,
     removeAllItems: () => void
 }

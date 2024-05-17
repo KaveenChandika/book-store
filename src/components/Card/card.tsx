@@ -23,11 +23,6 @@ export const FeaturesCard: React.FC<CardParams> = ({ id, imgUrl, title, author, 
     const router = useRouter();
     const addToCart = useCartStore((state) => state.addToCart);
     const cartState = useCartStore((state) => state.cartData);
-    // const features = badges.map((badge) => (
-    //     <Badge variant="light" key={badge.label} leftSection={badge.emoji}>
-    //         {badge.label}
-    //     </Badge>
-    // ));
 
     const handleOnClick = (e:any, id:number) => {
         e.preventDefault();
@@ -35,7 +30,7 @@ export const FeaturesCard: React.FC<CardParams> = ({ id, imgUrl, title, author, 
     }
 
     const handleAddToCart = (e: any, id: number,qty:number) => {
-        const data = books.filter((val:any) => {
+        const data:any = books.filter((val:any) => {
             if(val.id === id){
                val.qty = qty;
                return val;

@@ -13,9 +13,10 @@ import Link from 'next/link';
 const PAGE_SIZE = 10;
 // add type for props
 export function OrderTable() {
-    const data = JSON.parse(localStorage.getItem("order"));
+    const orders = localStorage.getItem("order");
+    const data = orders ? JSON.parse(orders) : [];
     const [page, setPage] = useState(1);
-    const [records, setRecords] = useState([]);
+    const [records, setRecords] = useState<any[]>([]);
     const [items, setItems] = useState(data[0].order);
 
     useEffect(() =>{
@@ -29,7 +30,6 @@ export function OrderTable() {
             withTableBorder
             withColumnBorders
             striped
-            onPageChange={(p) => setPage(p)}
             highlightOnHover
             height="auto"
             width={'100%'}
@@ -47,7 +47,7 @@ export function OrderTable() {
                   <>  
                     <div style={{margin:'20px',textAlign:'center'}}>
                         <Text fw={600} >ITEMS</Text>
-                        {record?.orders?.map((dt) => (
+                        {record?.orders?.map((dt:any) => (
                           <Stack className={classes.details} p="xs" gap={6}>
                             <Group gap={6} style={{display:'flex', gap:'2'}}>
                               <div style={{flex:2,display:'flex',alignItems:'center', gap:'10px'}}>

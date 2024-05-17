@@ -13,7 +13,7 @@ const Products = () => {
     const [author,setAuthor] = useState<String>('');
     const [bookData,setBookData] = useState(books);
     const [categories,setCategories] = useState<any[]>();
-    const [searchValue,setSearchValue] = useState('');
+    const [searchValue,setSearchValue] = useState<any>('');
 
     const handleFilterCriterias = () =>{
         if(title != ''){
