@@ -9,8 +9,18 @@ node verions 18
 If you have nvm please use following commands
 nvm install 18
 nvm use 18
+```
+Module Installations
 
-npm run dev
+```bash
+npm install
+```
+
+Production Build
+```bash
+npm run build
+npm start
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
