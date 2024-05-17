@@ -1,0 +1,28 @@
+.order{
+    width: 100%;
+    margin: 50px;
+
+    margin: 50px;
+    display: flexbox;
+    gap: 10px;
+    width: 150%;
+    align-items: center;
+    padding: calc(var(--mantine-spacing-md) * 2);
+    background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8));
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        flex-direction: column-reverse;
+        padding: var(--mantine-spacing-xl);
+    }
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.orderEmpty {
+    width: 100%;
+    text-align: center;
+    color: purple;
+    font-weight: bold;
+}
+
+

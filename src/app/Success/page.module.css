@@ -1,0 +1,15 @@
+.success {
+    flex:3;
+    margin: 50px;
+    display: flexbox;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: calc(var(--mantine-spacing-md) * 2);
+    color: purple;
+    background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8));
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* transition: 0.3s; */
+}

@@ -1,0 +1,121 @@
+.wrapper {
+    margin: 50px;
+    display: flexbox;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    padding: calc(var(--mantine-spacing-md) * 2);
+    background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8));
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        flex-direction: column-reverse;
+        padding: var(--mantine-spacing-xl);
+    }
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* transition: 0.3s; */
+}
+
+.cartDetails {
+    border-top: 1px solid purple;
+    padding: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 10px;
+    @media (max-width: $mantine-breakpoint-sm) {
+        max-width: 100%;
+    }
+}
+
+.title {
+    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+    font-family:
+        Greycliff CF,
+        var(--mantine-font-family);
+    line-height: 1;
+    margin-bottom: var(--mantine-spacing-md);
+}
+
+.controls {
+    /* display: flex; */
+    gap: 10px;
+    margin-top: var(--mantine-spacing-xl);
+}
+
+.inputWrapper {
+    width: 100%;
+    flex: 1;
+}
+
+.input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+}
+
+.publish {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.publish>p {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.genre {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.genre>p {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.genre>span {
+    display: flex;
+    gap: 5px;
+}
+
+.cartEmpty {
+    width: 100%;
+    text-align: center;
+    color: purple;
+    font-weight: bold;
+}
+
+.cartContent {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-right: 1px solid purple;
+}
+
+.cartContent > p{
+    width: 100%
+}
+
+.trashicon{
+    font-size: 30px;
+    color: red;
+    cursor: pointer;
+}
+
+.cartHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
