@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Navbar } from "./Navbar/Navbar";
-import { ColorSchemeScript,MantineProvider } from '@mantine/core';
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.layer.css';
 import 'mantine-datatable/styles.layer.css';
 import "./layout.css";
@@ -21,11 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <MantineProvider  defaultColorScheme="auto">
-          <div style={{display:'flex'}}>
+        <MantineProvider defaultColorScheme="auto">
+          <div style={{ display: 'flex' }}>
             <Navbar />
-            <div style={{margin:'10px'}}>
-             {children}
+            <div style={{ margin: '10px' }}>
+              {children}
             </div>
           </div>
         </MantineProvider>

@@ -6,6 +6,9 @@ import { BsCartPlusFill } from "react-icons/bs";
 import { useCartStore } from '@/store';
 import { notifications } from '@mantine/notifications';
 import books from '../../../component.json';
+import alertify from 'alertifyjs';
+import 'alertifyjs/build/css/alertify.css';
+import { useEffect } from 'react';
 
 
 type CardParams = {
@@ -30,6 +33,11 @@ export const FeaturesCard: React.FC<CardParams> = ({ id, imgUrl, title, author, 
     }
 
     const handleAddToCart = (e: any, id: number,qty:number) => {
+        if (typeof window !== 'undefined') {
+            import('alertifyjs/build/alertify.min.js').then((alertify) => {
+                alertify.success('ITEM ADDED TO CART');
+            });
+        }
         const data:any = books.filter((val:any) => {
             if(val.id === id){
                val.qty = qty;
@@ -38,7 +46,6 @@ export const FeaturesCard: React.FC<CardParams> = ({ id, imgUrl, title, author, 
         })
         addToCart(id,data);
     }
-
     return (
         <Card withBorder radius="md" p="md" className={classes.card}>
             <Card.Section>

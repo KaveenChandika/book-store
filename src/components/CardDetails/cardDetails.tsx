@@ -9,6 +9,8 @@ import { useCartStore } from '@/store';
 import Input from '../Input/Input';
 import NumberPicker from '../NumberPicker/numberPicker';
 import { useRouter } from 'next/navigation';
+import alertify from 'alertifyjs';
+import 'alertifyjs/build/css/alertify.css';
 
 type cardDeatilsParams = {
     id: number
@@ -20,6 +22,7 @@ export const CardDetails: React.FC<cardDeatilsParams> = ({ id }) => {
     const addToCart = useCartStore((state) => state.addToCart);
     const cartState = useCartStore((state) => state.cartData);
     const handleAddToCart = (e: any, id: number,qty:number) => {
+        alertify.success('ITEM ADDED TO CART'); 
         const data = books.filter((val:any) => {
             if(val.id === id){
                val.qty = qty;
